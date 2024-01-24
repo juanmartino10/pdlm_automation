@@ -1,21 +1,21 @@
 class SearchBar {
 
-    getSearchBarButton() {
+    get SearchBarButton() {
         return cy.get('.btnMostrarBuscador')
     }
 
-    getSearchBarInput() {
+    get SearchBarInput() {
         return cy.get('.tt-input')
     }
 
-    getDeclineNotification() {
+    get DeclineNotification() {
         return cy.get('#btnNoIdWpnPush');
     }
 
     newSearch = (instrument) => {
-        this.getDeclineNotification().click()
-        this.getSearchBarButton().click()
-        this.getSearchBarInput().type(instrument + '{enter}')
+        this.DeclineNotification.click()
+        this.SearchBarButton.click()
+        this.SearchBarInput.type(instrument + '{enter}')
     }
 }
 
