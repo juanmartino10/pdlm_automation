@@ -28,6 +28,10 @@ class HomePage {
         return cy.get('.btnItem.btnMiCompra');
     }
 
+    get closeShoppingCartButton() {
+        return cy.get('.btnCerrar');
+    }
+
     get helpButton() {
         return cy.get('.ayuda.toolsItem');
     }
@@ -98,6 +102,38 @@ class HomePage {
 
     get djAndProductionPictureLink() {
         return cy.get('[data-id="62"]');
+    }
+
+    get keyboardsLabel() {
+        return cy.get('[data-id="437"]');
+    }
+
+    get keyboardsImage() {
+        return cy.get('img[alt="Teclados"]');
+    }
+
+    get microphonesLabel() {
+        return cy.get('[data-id="435"]');
+    }
+
+    get microphonesImage() {
+        return cy.get('img[alt="Micrófonos"]');
+    }
+
+    get illuminationLabel() {
+        return cy.get('[data-id="436"]');
+    }
+
+    get illuminationImage() {
+        return cy.get('img[alt="Iluminación"]');
+    }
+
+    get guitarsLabel() {
+        return cy.get('[data-id="434"]');
+    }
+
+    get electricGuitarsImage() {
+        return cy.get('img[alt="Guitarras eléctricas"]');
     }
 }
 

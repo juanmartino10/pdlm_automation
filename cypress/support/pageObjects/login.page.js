@@ -22,6 +22,26 @@ class LoginPage {
     get MessageError() {
       return cy.get('div.msg.err p')
     }
+
+    get loginWithFacebookButton() {
+      return cy.get('.btn.btnLoginFacebook');
+    }
+
+    get loginWithGoogleButton() {
+      return cy.get('.btn.btnLoginGoogle');
+    }
+
+    get loginWithoutPasswordButton() {
+      return cy.get('.btn.btn02.btnLoginPIN');
+    }
+
+    get forgotPasswordButton() {
+      return cy.get('.btnOlvideContrasena');
+    }
+
+    get registerNewAccountButton() {
+      return cy.get('.btnCrearCuenta');
+    }
   
     login(email, password) {
       this.AsideButton.click()
