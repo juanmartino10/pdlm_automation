@@ -1,5 +1,9 @@
 class HomePage {
     
+    get loginPopUp() {
+        return cy.get('[id="ppLogin"]');
+    }
+
     get myAccountOptionsButton() {
         return cy.get('.btnItem.btnMiCuenta')
     }
@@ -28,6 +32,10 @@ class HomePage {
         return cy.get('.btnItem.btnMiCompra');
     }
 
+    get shoppingCartOpened() {
+        return cy.get('.detalle')
+    }
+
     get closeShoppingCartButton() {
         return cy.get('.btnCerrar');
     }
@@ -45,7 +53,15 @@ class HomePage {
     }
 
     get usdCurrencyActivated() {
-        return cy.get('.it.cambioMonedaWrapper.on');
+        return cy.get('.it.cambioMonedaWrapper');
+    }
+
+    get blogButton() {
+        return cy.get('a.tit').contains('Blog');
+    }
+
+    get brandsButton() {
+        return cy.get('a.tit').contains('Marcas');
     }
 
     get storesButton() {

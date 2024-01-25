@@ -44,7 +44,6 @@ class LoginPage {
     }
   
     login(email, password) {
-      this.AsideButton.click()
       this.AccountButton.click({ force: true, multiple: true });
       this.EmailInput.type(email)
       this.PasswordInput.type(password);
