@@ -1,4 +1,4 @@
-class SearchBar {
+class HomePage {
     
     get myAccountOptionsButton() {
         return cy.get('.btnItem.btnMiCuenta')
@@ -101,4 +101,4 @@ class SearchBar {
     }
 }
 
-export default new SearchBar();
+export default new HomePage();
