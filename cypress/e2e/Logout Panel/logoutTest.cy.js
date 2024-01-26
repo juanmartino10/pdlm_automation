@@ -9,7 +9,7 @@ describe("Logout TestSuite", () => {
         LoginPage.login(loginData.validEmail, loginData.validPassword);
     });
 
-    it("Success logout", () => {
+    it("@Smoke - Success logout", () => {
         logoutPage.newLogout()
         logoutPage.AccountButton.find('.nombre, .apellido').should('not.be.visible');
     })
