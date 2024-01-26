@@ -1,5 +1,5 @@
 import LoginPage from "../../support/pageObjects/login.page.js";
-import loginData from "../../test-data/login";
+import loginData from "../../test-data/login.js";
 import HomePage from "../../support/pageObjects/home.page.js"
 import deepLinks from "../../test-data/deepLinks.js";
 import baseLinks from "../../test-data/baseLinks.js";
