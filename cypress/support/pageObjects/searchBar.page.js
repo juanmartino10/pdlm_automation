@@ -13,9 +13,8 @@ class SearchBar {
     }
 
     newSearch = (instrument) => {
-        this.DeclineNotification.click()
-        this.SearchBarButton.click()
-        this.SearchBarInput.type(instrument + '{enter}')
+        this.DeclineNotification.click({force: true})
+        this.SearchBarInput.click().type(instrument + '{enter}')
     }
 }
 
