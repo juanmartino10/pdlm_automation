@@ -8,11 +8,11 @@ describe("Login TestSuite", () => {
     cy.visit("/");
   });
 
-  it("Success Login", () => {
+  it("@Smoke - Success Login", () => {
     LoginPage.login(loginData.validEmail, loginData.validPassword);
   });
 
-  it("Invalid Login", () => {
+  it("@Smoke - Invalid Login", () => {
     LoginPage.login(loginData.invalidEmail, loginData.validPassword);
     loginPage.MessageError.should('be.visible')
   });

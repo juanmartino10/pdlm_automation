@@ -9,14 +9,14 @@ describe("Cart suite", () => {
         LoginPage.login(loginData.validEmail, loginData.validPassword);
     });
 
-    it("Add product to cart using search bar", () => {
+    it("@Smoke - Add product to cart using search bar", () => {
         const instrument = "Bateria Mapex";
         searchBarPage.newSearch(instrument);
         cartPage.addToCartUsingSearchBar();
         cartPage.externalShoppingCartOpened.should('contain.text', instrument);
     });
 
-    it("Add product to cart using catalog button", () => {
+    it("@Smoke - Add product to cart using catalog button", () => {
         const category = "Guitarras y Bajos";
         let currentCartItemCount;
         cartPage.externalShoppingCartOpened.invoke('text').then((text) => {
