@@ -14,7 +14,7 @@ describe("Login TestSuite", () => {
 
   it("Invalid Login", () => {
     LoginPage.login(loginData.invalidEmail, loginData.validPassword);
-    loginPage.getMessageError().should('be.visible')
+    loginPage.MessageError.should('be.visible')
   });
 
 });
