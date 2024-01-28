@@ -5,6 +5,7 @@ const deepLinks = {
     brandsUrl: `${baseLinks.baseUrl}/marcas`,
     storesUrl: `${baseLinks.baseUrl}/tiendas`,
     forgotPasswordUrl: `${baseLinks.baseUrl}/recuperar-contrasena`,
+    linkPostEditAccountInfo: `${baseLinks.baseUrl}/mi-cuenta?status=ok`,
 
     //links from picture links - home
     guitarsAndBasesUrlFromHomePictureLink: `${baseLinks.baseUrl}/guitarras-y-bajos`,
