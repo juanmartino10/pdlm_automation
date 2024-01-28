@@ -8,6 +8,10 @@ class HomePage {
         return cy.get('.btnItem.btnMiCuenta')
     }
 
+    get myAccountOptionsButtonPostLogin() {
+        return cy.get('.usuario');
+    }
+
     get myDataButton() {
         return cy.get('[href="/mi-cuenta/mis-datos"]');
     }
@@ -42,18 +46,6 @@ class HomePage {
 
     get helpButton() {
         return cy.get('.ayuda.toolsItem');
-    }
-
-    get changeCurrencyButton() {
-        return cy.get('.cambioMoneda');
-    }
-
-    get uyuCurrencyActivated() {
-        return cy.get('.it.cambioMonedaWrapper.on');
-    }
-
-    get usdCurrencyActivated() {
-        return cy.get('.it.cambioMonedaWrapper');
     }
 
     get blogButton() {
