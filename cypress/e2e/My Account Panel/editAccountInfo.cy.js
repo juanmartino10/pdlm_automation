@@ -12,7 +12,7 @@ describe("Edit Account Information", () => {
         LoginPage.login(loginData.validEmail, loginData.validPassword);
     });
 
-    it("@Smoke - Edit first name account", () => {
+    it("@Smoke - Edit first name and last name account", () => {
         HomePage.myAccountOptionsButtonPostLogin.click({ multiple: true, force: true });
         HomePage.myDataButton.click({ multiple: true, force: true });
         MyAccountInfoPage.edit(EditAccountInfoData.firstName, EditAccountInfoData.lastName);
