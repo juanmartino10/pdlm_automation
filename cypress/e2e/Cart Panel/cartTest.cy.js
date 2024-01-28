@@ -26,4 +26,12 @@ describe("Cart suite", () => {
         cartPage.cartWithItem.should('exist').and('not.be.empty');
     });
     
+    it("@Smoke - Add product to cart and delete it", () => {
+        const instrument = "Piano";
+        searchBarPage.newSearch(instrument);
+        cartPage.addToCartUsingSearchBar();
+        cartPage.externalShoppingCartOpened.should('contain.text', instrument);
+        cartPage.deleteItemButton.click()
+        cy.contains('Aún no has agregado artículos a tu compra.').should('exist');
+    })
 });

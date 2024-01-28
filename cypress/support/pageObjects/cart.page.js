@@ -33,6 +33,10 @@ class Cart {
         return homePage.shoppingCartOpened;
     }
 
+    get deleteItemButton() {
+        return cy.get('button.btnQuitar')   
+    }
+
     addToCartUsingSearchBar = () => {
         this.cardItem.first().click();
         this.purchaseButton.click();
