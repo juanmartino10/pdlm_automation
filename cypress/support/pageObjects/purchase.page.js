@@ -1,5 +1,3 @@
-
-
 class Purchase {
 
     get purchaseButton() {
@@ -46,11 +44,24 @@ class Purchase {
         return cy.get('button[type="submit"].btn.btn04.btnFinalizar')
     }
 
-    newPurchase = () => {
-        this.purchaseButton.click()
-        this.continueButton.click()
+    get continuePurchaseButton() {
+        return cy.get('button.btnContinuar')
     }
 
+    newPurchase = (purchaseData) => {
+        this.purchaseButton.click();
+        this.continueButton.click();
+        this.addAddressButton.click();
+        this.countryButton.select(purchaseData.country);
+        this.departmentButton.select(purchaseData.department);
+        this.locationButton.select(purchaseData.location);
+        this.addressInput.type(purchaseData.address);
+        this.portNumberInput.type(purchaseData.number);
+        this.saveAddressButton.click({ multiple: true }, {force: true});
+        this.continuePurchaseButton.click();
+        this.abitabPaidMethod.click();
+        this.continueButton.click({ multiple: true });
+    };    
 }
 
 export default new Purchase;
