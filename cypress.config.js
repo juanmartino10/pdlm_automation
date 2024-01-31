@@ -8,5 +8,13 @@ module.exports = defineConfig({
     defaultCommandTimeout: 20000,
     chromeWebSecurity: false
   },
-
-});
+  watchForFileChanges: false,
+  experimentalSourceRewriting: true,
+  chromeWebSecurity: false,
+  defaultCommandTimeout: 10000,
+  // Deshabilitar la detección de errores no capturados
+  // onUncaughtException: false,
+  // env: {
+  //   CYPRESS_UNCAUGHT_EXCEPTION_HANDLER: "false"
+  }
+);
